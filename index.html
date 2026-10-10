@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Business Capability Advisory — diagnostics, research and advisory to help businesses understand how they operate and what shapes their performance.">
+  <title>Business Capability Advisory | Diagnostics · Research · Advisory</title>
+  <style>
+    :root {
+      --ink: #17232e;
+      --muted: #53616d;
+      --paper: #f6f7f5;
+      --white: #ffffff;
+      --accent: #b85c38;
+      --line: #d9dfdf;
+      --navy: #1d303d;
+      --soft: #e9eeec;
+      --max: 1120px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behaviour: smooth; }
+    body {
+      margin: 0; background: var(--paper); color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65; -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    .wrap { width: min(var(--max), calc(100% - 48px)); margin-inline: auto; }
+    header { padding: 25px 0; border-bottom: 1px solid var(--line); background: rgba(246,247,245,.94); }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: flex; align-items: center; gap: 13px; text-decoration: none; }
+    .mark {
+      width: 42px; height: 42px; display: grid; place-items: center; border: 1.5px solid var(--accent);
+      color: var(--accent); font-size: 17px; font-weight: 750; letter-spacing: -.06em;
+    }
+    .brand-name { font-size: 13px; line-height: 1.25; font-weight: 760; letter-spacing: .08em; text-transform: uppercase; }
+    .brand-name span { display: block; color: var(--muted); font-size: 10px; font-weight: 600; letter-spacing: .19em; margin-top: 5px; }
+    nav { display: flex; gap: 24px; flex-wrap: wrap; }
+    nav a { text-decoration: none; font-size: 13px; color: var(--muted); }
+    nav a:hover { color: var(--accent); }
+    .hero { padding: 94px 0 90px; background: var(--white); border-bottom: 1px solid var(--line); }
+    .eyebrow { color: var(--accent); font-size: 11px; font-weight: 800; letter-spacing: .19em; text-transform: uppercase; }
+    h1 { font-size: clamp(40px, 6.4vw, 76px); line-height: 1.04; letter-spacing: -.055em; max-width: 850px; margin: 22px 0 25px; font-weight: 680; }
+    .hero p { max-width: 710px; font-size: clamp(17px, 2vw, 20px); color: var(--muted); margin: 0; }
+    .hero-bottom { display: flex; justify-content: space-between; align-items: end; gap: 30px; margin-top: 45px; }
+    .pillars { display: flex; gap: 10px; flex-wrap: wrap; }
+    .pillars span { padding: 8px 12px; border: 1px solid var(--line); font-size: 12px; letter-spacing: .04em; }
+    .scroll-note { color: var(--muted); font-size: 12px; white-space: nowrap; }
+    section { padding: 76px 0; border-bottom: 1px solid var(--line); }
+    .section-head { display: grid; grid-template-columns: 1fr 1.7fr; gap: 36px; margin-bottom: 36px; }
+    h2 { font-size: clamp(27px, 3.6vw, 42px); line-height: 1.15; letter-spacing: -.04em; margin: 0; font-weight: 650; }
+    .section-head p { margin: 2px 0 0; max-width: 650px; color: var(--muted); }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .card { background: var(--white); border: 1px solid var(--line); padding: 27px; min-height: 225px; }
+    .number { color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .12em; }
+    h3 { font-size: 20px; letter-spacing: -.025em; margin: 24px 0 10px; }
+    .card p { color: var(--muted); font-size: 14px; margin: 0; }
+    .dark { background: var(--navy); color: var(--white); }
+    .dark .section-head p, .dark .detail p { color: #c4cfd4; }
+    .dark .eyebrow { color: #efab8d; }
+    .details { display: grid; grid-template-columns: 1fr 1fr; gap: 42px; align-items: start; }
+    .detail { padding-top: 4px; }
+    .detail h3 { margin-top: 0; font-size: 22px; }
+    .detail p { color: var(--muted); margin: 0 0 14px; }
+    .statement { font-size: clamp(24px, 3vw, 35px); line-height: 1.35; letter-spacing: -.03em; max-width: 900px; margin: 0; }
+    .statement em { color: #efab8d; font-style: normal; }
+    .approach-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); margin-top: 36px; }
+    .approach-grid div { background: var(--paper); padding: 22px; }
+    .approach-grid b { display: block; margin-bottom: 7px; font-size: 14px; }
+    .approach-grid span { display: block; color: var(--muted); font-size: 13px; }
+    .contact { display: flex; align-items: end; justify-content: space-between; gap: 32px; }
+    .contact p { color: var(--muted); max-width: 610px; }
+    .contact-note { font-size: 13px; border-left: 2px solid var(--accent); padding-left: 15px; max-width: 290px; color: var(--muted); }
+    footer { padding: 25px 0 32px; color: var(--muted); font-size: 12px; }
+    .footer-row { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    @media (max-width: 760px) {
+      .wrap { width: min(100% - 32px, var(--max)); }
+      .nav { align-items: flex-start; flex-direction: column; }
+      nav { gap: 16px; }
+      .hero { padding: 67px 0 62px; }
+      .hero-bottom, .contact { align-items: flex-start; flex-direction: column; }
+      .section-head, .details { grid-template-columns: 1fr; gap: 18px; }
+      section { padding: 57px 0; }
+      .cards { grid-template-columns: 1fr; }
+      .card { min-height: auto; }
+      .approach-grid { grid-template-columns: 1fr 1fr; }
+      .scroll-note { white-space: normal; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behaviour: auto; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="Business Capability Advisory home">
+        <div class="mark" aria-hidden="true">BCA</div>
+        <div class="brand-name">Business Capability<span>Advisory</span></div>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#work">What we do</a>
+        <a href="#approach">Our approach</a>
+        <a href="#principle">Principle</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="hero">
+      <div class="wrap">
+        <div class="eyebrow">Business Capability Advisory</div>
+        <h1>Understand how your business really works.</h1>
+        <p>We help businesses examine how they operate, what shapes their performance, and where their capabilities can be strengthened — through diagnostics, independent research and advisory.</p>
+        <div class="hero-bottom">
+          <div class="pillars" aria-label="Services">
+            <span>Diagnostics</span><span>Research</span><span>Advisory</span>
+          </div>
+          <div class="scroll-note">Evidence before conclusion. Insight before action.</div>
+        </div>
+      </div>
+    </div>
+
+    <section id="work">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="eyebrow">Areas of work</div><h2>Start with the question that matters.</h2></div>
+          <p>Organisations often have more data, procedures and measures than they have understanding. Our work starts by clarifying the question, examining the available evidence and identifying what can reasonably be concluded.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <div class="number">01 / DIAGNOSTICS</div>
+            <h3>See the system behind the symptoms.</h3>
+            <p>Explore how processes, responsibilities, management practices and organisational conditions shape day-to-day performance.</p>
+          </article>
+          <article class="card">
+            <div class="number">02 / RESEARCH</div>
+            <h3>Investigate before prescribing.</h3>
+            <p>Structured inquiry into a defined business question. A study may conclude with evidence-based findings alone, without recommendations or implementation work.</p>
+          </article>
+          <article class="card">
+            <div class="number">03 / ADVISORY</div>
+            <h3>Make sense of the findings.</h3>
+            <p>Where requested, translate findings into options, priorities and practical next steps while keeping assumptions and uncertainty visible.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="approach">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="eyebrow">How we work</div><h2>Evidence before conclusion.</h2></div>
+          <p>Good decisions depend on understanding what is happening, how it happens and what the evidence can — and cannot — tell us. We distinguish observed facts from interpretation and make the limits of a conclusion explicit.</p>
+        </div>
+        <div class="approach-grid">
+          <div><b>01 — Define</b><span>Clarify the question, scope and intended use of the work.</span></div>
+          <div><b>02 — Examine</b><span>Gather and assess relevant evidence from the system.</span></div>
+          <div><b>03 — Interpret</b><span>Test explanations and distinguish findings from assumptions.</span></div>
+          <div><b>04 — Report</b><span>Present conclusions clearly, with limitations made visible.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="principle" class="dark">
+      <div class="wrap">
+        <div class="eyebrow">A working principle</div>
+        <p class="statement">Our role is to establish what the evidence supports. <em>The client decides what to change.</em></p>
+        <div class="details" style="margin-top:40px">
+          <div class="detail">
+            <h3>Understanding before intervention</h3>
+            <p>Not every business question requires a new procedure, a new metric or a transformation programme. Sometimes the most valuable outcome is a clearer account of the situation and the factors shaping it.</p>
+          </div>
+          <div class="detail">
+            <h3>Independent thinking, practical relevance</h3>
+            <p>We aim to make complex organisational questions easier to examine and discuss, without presenting assumptions as facts or treating recommendations as an automatic consequence of every study.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap contact">
+        <div>
+          <div class="eyebrow">Start a conversation</div>
+          <h2>What do you need to understand?</h2>
+          <p>Tell us the question you are trying to answer, the situation you are examining, or the evidence you already have. We can begin by defining the scope of the enquiry.</p>
+        </div>
+        <div class="contact-note">Contact details will be added once the preferred business email address and website domain are confirmed.</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-row">
+      <span>© <span id="year">2026</span> Business Capability Advisory</span>
+      <span>Diagnostics · Research · Advisory</span>
+    </div>
+  </footer>
+</body>
+</html>
